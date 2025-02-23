@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    background: #fff;
+    padding: 20px;
+    width: 400px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: 0.3s;
+}
+
+h1 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.input-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+input {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #ff416c;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #ff5722;
+    box-shadow: 0 0 8px rgba(255, 87, 34, 0.5);
+}
+
+/* Styled Buttons with Linear Gradient */
+button {
+    padding: 10px 15px;
+    border: none;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(to right, #ff5722, #e64a19);
+}
+
+.filters {
+    margin-bottom: 10px;
+}
+
+.filter-btn {
+    background: linear-gradient(to right, #ddd, #bbb);
+    color: black;
+    margin: 5px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.filter-btn.active {
+    background: linear-gradient(to right, #ff5722, #ff3b2d);
+    color: white;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+li {
+    background: #f9f9f9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    margin: 5px 0;
+    border-radius: 8px;
+    transition: 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+li:hover {
+    background: #f1f1f1;
+}
+
+/* ✅ Properly Styled Completed Tasks */
+.completed .task-text {
+    text-decoration: line-through;
+    color: gray;
+    opacity: 0.6;
+}
+
+/* Task Actions (Buttons) */
+.task-actions {
+    display: flex;
+    gap: 5px;
+}
+
+/* ✅ Keep Delete Button Fully Visible */
+.completed .delete {
+    opacity: 1 !important;
+    pointer-events: all !important;
+}
+
+/* Styled Action Buttons */
+.done {
+    background: linear-gradient(to right, #28a745, #218838);
+}
+
+.done:hover {
+    background: linear-gradient(to right, #218838, #1e7e34);
+}
+
+.edit {
+    background: linear-gradient(to right, #03a9f4, #0288d1);
+}
+
+.edit:hover {
+    background: linear-gradient(to right, #0288d1, #0277bd);
+}
+
+/* Delete Button */
+.delete {
+    background: linear-gradient(to right, #f44336, #d32f2f);
+    font-weight: bold;
+}
+
+.delete:hover {
+    background: linear-gradient(to right, #d32f2f, #b71c1c);
+}
+
+/* Reset Button */
+#reset {
+    margin-top: 15px;
+    background: linear-gradient(to right, #ff0000, #b71c1c);
+    padding: 12px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+#reset:hover {
+    background: linear-gradient(to right, #b71c1c, #8b0000);
+}
