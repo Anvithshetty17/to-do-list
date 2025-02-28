@@ -51,7 +51,7 @@ input:focus {
     box-shadow: 0 0 8px rgba(255, 87, 34, 0.5);
 }
 
-/* Styled Buttons with Linear Gradient */
+
 button {
     padding: 10px 15px;
     border: none;
@@ -108,8 +108,7 @@ li {
 li:hover {
     background: #f1f1f1;
 }
-
-/* ✅ Properly Styled Completed Tasks */
+
 .completed .task-text {
     text-decoration: line-through;
     color: gray;
@@ -122,13 +121,13 @@ li:hover {
     gap: 5px;
 }
 
-/* ✅ Keep Delete Button Fully Visible */
+
 .completed .delete {
     opacity: 1 !important;
     pointer-events: all !important;
 }
 
-/* Styled Action Buttons */
+
 .done {
     background: linear-gradient(to right, #28a745, #218838);
 }
@@ -145,7 +144,7 @@ li:hover {
     background: linear-gradient(to right, #0288d1, #0277bd);
 }
 
-/* Delete Button */
+
 .delete {
     background: linear-gradient(to right, #f44336, #d32f2f);
     font-weight: bold;
@@ -155,7 +154,7 @@ li:hover {
     background: linear-gradient(to right, #d32f2f, #b71c1c);
 }
 
-/* Reset Button */
+
 #reset {
     margin-top: 15px;
     background: linear-gradient(to right, #ff0000, #b71c1c);
