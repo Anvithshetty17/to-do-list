@@ -52,20 +52,20 @@ function renderTasks(filter = "all") {
 
         if (!task.completed) {
             let editButton = document.createElement("button");
-            editButton.innerHTML = <i class="fas fa-edit"></i>;
+            editButton.innerHTML = `<i class="fas fa-edit"></i>`;
             editButton.classList.add("edit");
             editButton.onclick = () => editTask(index);
             actions.appendChild(editButton);
 
             let doneButton = document.createElement("button");
-            doneButton.innerHTML = <i class="fas fa-check"></i>;
+            doneButton.innerHTML = `<i class="fas fa-check"></i>`;
             doneButton.classList.add("done");
             doneButton.onclick = () => markCompleted(index);
             actions.appendChild(doneButton);
         }
 
         let deleteButton = document.createElement("button");
-        deleteButton.innerHTML = <i class="fas fa-trash-alt"></i>;
+        deleteButton.innerHTML = `<i class="fas fa-trash-alt"></i>`;
         deleteButton.classList.add("delete");
         deleteButton.onclick = () => deleteTask(index);
         actions.appendChild(deleteButton);
