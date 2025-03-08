@@ -50,20 +50,6 @@ function renderTasks(filter = "all") {
         let actions = document.createElement("div");
         actions.classList.add("task-actions");
 
-        if (!task.completed) {
-            let editButton = document.createElement("button");
-            editButton.innerHTML = `<i class="fas fa-edit"></i>`;
-            editButton.classList.add("edit");
-            editButton.onclick = () => editTask(index);
-            actions.appendChild(editButton);
-
-            let doneButton = document.createElement("button");
-            doneButton.innerHTML = `<i class="fas fa-check"></i>`;
-            doneButton.classList.add("done");
-            doneButton.onclick = () => markCompleted(index);
-            actions.appendChild(doneButton);
-        }
-
         let deleteButton = document.createElement("button");
         deleteButton.innerHTML = `<i class="fas fa-trash-alt"></i>`;
         deleteButton.classList.add("delete");
@@ -74,37 +60,4 @@ function renderTasks(filter = "all") {
         li.appendChild(actions);
         taskList.appendChild(li);
     });
-}
-
-function editTask(index) {
-    let tasks = JSON.parse(localStorage.getItem("tasks"));
-    let newText = prompt("Edit Task:", tasks[index].text);
-    if (newText) {
-        tasks[index].text = newText;
-        localStorage.setItem("tasks", JSON.stringify(tasks));
-        renderTasks(getActiveFilter());
-    }
-}
-
-function markCompleted(index) {
-    let tasks = JSON.parse(localStorage.getItem("tasks"));
-    tasks[index].completed = true;
-    localStorage.setItem("tasks", JSON.stringify(tasks));
-    renderTasks(getActiveFilter());
-}
-
-function deleteTask(index) {
-    let tasks = JSON.parse(localStorage.getItem("tasks"));
-    tasks.splice(index, 1);
-    localStorage.setItem("tasks", JSON.stringify(tasks));
-    renderTasks(getActiveFilter());
-}
-
-function clearAll() {
-    localStorage.removeItem("tasks");
-    renderTasks("all");
-}
-
-function getActiveFilter() {
-    return document.querySelector(".filter-btn.active")?.dataset.filter || "all";
 }
