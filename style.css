@@ -51,7 +51,6 @@ input:focus {
     box-shadow: 0 0 8px rgba(255, 87, 34, 0.5);
 }
 
-
 button {
     padding: 10px 15px;
     border: none;
@@ -68,65 +67,40 @@ button:hover {
     background: linear-gradient(to right, #ff5722, #e64a19);
 }
 
-.filters {
+/* Task Container */
+.task-container {
+    max-height: 300px;
+    overflow-y: auto;
+    padding: 10px;
+    border: 2px solid #ff416c;
+    border-radius: 10px;
     margin-bottom: 10px;
-}
-
-.filter-btn {
-    background: linear-gradient(to right, #ddd, #bbb);
-    color: black;
-    margin: 5px;
-    padding: 8px 12px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.filter-btn.active {
-    background: linear-gradient(to right, #ff5722, #ff3b2d);
-    color: white;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-    margin-top: 10px;
-}
-
-li {
     background: #f9f9f9;
+}
+
+/* Style Each Task as a Card */
+.task-item {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 12px;
-    margin: 5px 0;
-    border-radius: 8px;
-    transition: 0.3s;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 8px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-li:hover {
-    background: #f1f1f1;
-}
-
 .completed .task-text {
     text-decoration: line-through;
     color: gray;
     opacity: 0.6;
 }
 
-/* Task Actions (Buttons) */
+/* Task Actions */
 .task-actions {
     display: flex;
     gap: 5px;
 }
-
-
-.completed .delete {
-    opacity: 1 !important;
-    pointer-events: all !important;
-}
-
 
 .done {
     background: linear-gradient(to right, #28a745, #218838);
@@ -144,16 +118,13 @@ li:hover {
     background: linear-gradient(to right, #0288d1, #0277bd);
 }
 
-
 .delete {
     background: linear-gradient(to right, #f44336, #d32f2f);
-    font-weight: bold;
 }
 
 .delete:hover {
     background: linear-gradient(to right, #d32f2f, #b71c1c);
 }
-
 
 #reset {
     margin-top: 15px;
